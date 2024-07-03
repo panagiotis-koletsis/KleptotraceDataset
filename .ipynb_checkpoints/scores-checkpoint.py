@@ -21,7 +21,33 @@ def calculate_f1_score(list1, list2):
     else:
         f1_score = 2 * (precision * recall) / (precision + recall)
 
-    return f1_score , precision , recall
+    acc="-"
+    return acc, f1_score , precision , recall
 
-# def calculate_score(list 1, list 2):
+def calculate_score(true, predicted):  #
+    TPs = 0             # true positives TP (predicted entities that are correct)
+    TPsFPs = 0          # true positives TP + false positives FP (predicted entities, counting correct and incorrect)
+    TPsFPsFNs = 0       # TP+FP+FN (predicted entities (correct and incorrect) plus entities missed)
+    TPsFNs = 0          # TP+FN (entities in ground truth)
+
+    for i in range(len(true)):
+        true_set = set(true[i])
+        predicted_set = set(predicted[i])
+
+        # Calculate the intersection and union of the two sets
+        intersection = true_set.intersection(predicted_set)
+        union = true_set.union(predicted_set)
+
+        # mporoun na ypologistoun kai pio eykola, alla to afinw etsi analytika gia na katalaveis ti einai to kathe set
+        # des edw: https://en.wikipedia.org/wiki/Precision_and_recall
+        TPs += len(intersection)
+        TPsFPs += len(predicted_set)
+        TPsFPsFNs += len(union)
+        TPsFNs += len(true_set)
+
+    precision = TPs / TPsFPs
+    recall = TPs / TPsFNs
+    accuracy = (TPs*1.0/TPsFPsFNs)
+    f1 = 2 * (precision * recall) / (precision + recall)
+    return accuracy, precision, recall, f1
     
