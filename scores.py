@@ -25,10 +25,10 @@ def calculate_f1_score(list1, list2):
     return acc, f1_score , precision , recall
 
 def calculate_score(true, predicted):  #
-    TPs = 0             # true positives TP (predicted entities that are correct)
-    TPsFPs = 0          # true positives TP + false positives FP (predicted entities, counting correct and incorrect)
-    TPsFPsFNs = 0       # TP+FP+FN (predicted entities (correct and incorrect) plus entities missed)
-    TPsFNs = 0          # TP+FN (entities in ground truth)
+    TPs = 0.0             # true positives TP (predicted entities that are correct)
+    TPsFPs = 0.0         # true positives TP + false positives FP (predicted entities, counting correct and incorrect)
+    TPsFPsFNs = 0.0       # TP+FP+FN (predicted entities (correct and incorrect) plus entities missed)
+    TPsFNs = 0.0          # TP+FN (entities in ground truth)
 
     for i in range(len(true)):
         true_set = set(true[i])
@@ -47,7 +47,7 @@ def calculate_score(true, predicted):  #
 
     precision = TPs / TPsFPs
     recall = TPs / TPsFNs
-    accuracy = (TPs*1.0/TPsFPsFNs)
+    accuracy = (TPs/TPsFPsFNs)
     f1 = 2 * (precision * recall) / (precision + recall)
     return accuracy, precision, recall, f1
 

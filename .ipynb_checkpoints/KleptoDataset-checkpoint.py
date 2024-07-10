@@ -8,7 +8,7 @@ def load_data():
     with open(path) as f:
         j = json.load(f)
         return j
-        
+              
 def main():
     start_time = time.time()
     print("main")
