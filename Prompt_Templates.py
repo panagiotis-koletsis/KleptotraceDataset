@@ -7,6 +7,7 @@
 #Think step by step
 #You are name entity recognizer, that you only need to identify individuals.  even if they are not important   Your final answer should be the list you concluded its correct!
 PROMPT_TEMPLATE = """
+    You are a Name Entity Recognition agent, working in a financial corruption tracing organization!
     your task is to extract all the people mentioned in the text! 
     At the end you will provide a list containing all the mentioned people ONLY THEIR NAMES. 
     Example ["name 1","name 2"]
@@ -31,12 +32,11 @@ PROMPT_TEMPLATE = """
 #You are a Name Entity Recognition agent, working in a financial corruption tracing organization!
 #You are name entity recognizer, that you only need to identify organizations. Even if they are not important. Your final answer should be the list you concluded its correct!
 PROMPT_TEMPLATE_ORG = """
-    your task is to extract all the Organizations mentioned in the text! At the end you will provide a list containing all the mentioned organizations ONLY THEIR NAMES. 
+    your task is to extract all the Organizations mentioned in the text! At the end you will provide a list containing all the mentioned organizations ONLY THEIR NAMES.
     Example ["org 1","org 2"]
     Do not include any countries such as USA, Belgium, United Arab Emirates (UAE)!
     Do not provide abstract names such as "a russian company"
     Keep the full name
-
     ---
 
     {context}

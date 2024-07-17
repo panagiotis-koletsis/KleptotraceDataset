@@ -30,10 +30,10 @@ def text_checking(text):
         new_prompt = text + '---I want it in a format ["name1","name2"].provide only the list between the []. Dont forget ""between the names.'
         text = f"""{model.invoke(new_prompt)}"""
 #        print("llm2",text)
-    if text.find('[') == -1 or text.find(']') == -1 or text.find('"') == -1 == -1:
-        model = Ollama(model="qwen2:7b")
-        new_prompt = text + '---I want it in a format ["name 1","name 2"].provide only the list between the []. Dont forget ""between the names. It is important to provide only 1 list'
-        text = f"""{model.invoke(new_prompt)}"""
+#     if text.find('[') == -1 or text.find(']') == -1 or text.find('"') == -1 == -1:
+#         model = Ollama(model="qwen2:7b")
+#         new_prompt = text + '---I want it in a format ["name 1","name 2"].provide only the list between the []. Dont forget ""between the names. It is important to provide only 1 list'
+#         text = f"""{model.invoke(new_prompt)}"""
         #print("llm3",text)
     if text.find('{'):
         text = text.replace("{", " ")
@@ -86,6 +86,7 @@ def llm_org(j,ground_truth):
         
         #replace simalar semantically elements from llm list as they appear in ground truth list
         names = llm_semantic2(ground_truth,names,i)
+#        print(names)
         list.append(names)
     return list
 
