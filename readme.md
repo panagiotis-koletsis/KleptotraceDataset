@@ -18,12 +18,9 @@ Environment: to create a conda environment run the follow commands
 
 Download Ollama: https://ollama.com/
 
-Download models from Ollama: 
-1) ollama pull gemma2:9b
-2) ollama pull qwen2:7b 
+Download models from Ollama: 1) ollama pull gemma2:9b, 2) ollama pull qwen2:7b 
 
-Run:
-1) python KleptoDataset.py
+Run: python KleptoDataset.py
 
 
 
