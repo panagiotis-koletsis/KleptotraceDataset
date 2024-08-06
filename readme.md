@@ -1,4 +1,5 @@
 This work have been done for EU KLEPTOTRACE project!
+It focuses on Individual Identification and Organization Identification using LLMs!
 
 Here we see the methodology used! More on the paper!
 ![Overview](methodology.png)
