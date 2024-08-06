@@ -16,6 +16,11 @@ Environment: to create a conda environment run the follow commands
 2) conda activate kleptotrace
 3) pip install -r requirements.txt
 
+Download Ollama: https://ollama.com/
+Download models from Ollama: 
+1) ollama pull gemma2:9b
+2) ollama pull qwen2:7b 
+
 Run:
 1) python KleptoDataset.py
 
