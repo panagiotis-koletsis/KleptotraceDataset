@@ -1,7 +1,7 @@
 This work have been done for EU KLEPTOTRACE project!
 
-![Overview](methodology.png)
 Here we see the methodology used! More on the paper!
+![Overview](methodology.png)
 
 At Main (KleptoDataset.py),  we can run 4 experiments by uncommenting the desired one!
 1) Individual Identification experiment 
