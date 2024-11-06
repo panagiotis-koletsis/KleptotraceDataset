@@ -10,7 +10,7 @@ At Main (KleptoDataset.py),  we can run 4 experiments by uncommenting the desire
 3) Individual Identification experiment on SpaCy (for comparison)
 4) Organization Identification experiment on SpaCy (fo comparison)
 
-The used dataset( change load_data() ): 
+The used dataset( change load_data() ): https://zenodo.org/records/14027005
 
 Environment: to create a conda environment run the follow commands
 1) conda create --name kleptotrace python=3.9
