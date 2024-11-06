@@ -1,5 +1,7 @@
 This work have been done for EU KLEPTOTRACE project!
 It focuses on Individual Identification and Organization Identification using LLMs!
+Paper Accepted by IEEE Big Data Application for fight against crime and terrorism (BDA4FCT) : https://bda4fct.iti.gr/
+Arxiv: https://arxiv.org/abs/2409.13704
 
 Here we see the methodology used! More on the paper!
 ![Overview](methodology.png)
